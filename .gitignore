@@ -1,5 +1,4 @@
 .idea
-public/wp
 vendor
 
 wp-content/plugins/advanced-custom-fields
@@ -8,10 +7,6 @@ wp-content/plugins/breadcrumb-trail
 wp-content/plugins/mailchimp-for-wp
 wp-content/plugins/responsive-lightbox
 wp-content/plugins/wp-retina-2x
-wp-content/plugins/.DS_Store
-wp-content/uploadswp-content/themes/toddlers/library/.DS_Store
-wp-content/themes/toddlers/library/img/.DS_Store
-wp-content/themes/toddlers/library/.DS_Store
-wp-content/uploads
+wp-content/uploads/
 wp/
 wp-config.php
