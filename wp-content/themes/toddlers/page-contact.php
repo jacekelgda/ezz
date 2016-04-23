@@ -54,6 +54,7 @@ if ($unf_options['unf_contactformemail'] ) {
 
 				$mail = new PHPMailer;
 				$mail->SMTPDebug = 2;
+                $mail->CharSet = "UTF-8";
 
 				$mail->isSMTP();                            // Set mailer to use SMTP
 				$mail->Host = 'in-v3.mailjet.com';  // Specify main and backup SMTP servers
@@ -64,15 +65,15 @@ if ($unf_options['unf_contactformemail'] ) {
 				$mail->Username = "6b23baeedffafd62effd5c3381e68b16";
 				$mail->Password = "63557b93d74dcd0493425d136fee742a";
 
-				$mail->setFrom('jacekelgda@gmail.com', 'Mailer');
+				$mail->setFrom('biuro@edu-zielonyzakatek.pl', 'Edu-ZielonyZakatek');
 				$mail->addAddress($contactformemail, $contactformemail);     // Add a recipient
 
-				$mail->isHTML(true);                                  // Set email format to HTML
+				$mail->isHTML(true);                                 // Set email format to HTML
 
-				$subject = 'Contact Form Submission from '.$name.' ( Sent from : '.esc_url( home_url() ).')';
+				$subject = 'Wiadomość od: ' . $name . ' ( Wysłano z: '.esc_url( home_url() ).')';
 				$sendCopy = isset($_POST['sendCopy']) ? trim($_POST['sendCopy']) : false;
-				$body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
-				$headers = 'From: My Site <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
+				$body = "$comments<br /><br />Od: $name, email: $email";
+				$headers = 'From: Edu-ZielonyZakatek.pl <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
 				$mail->Subject = $subject;
 				$mail->Body    = $body;
@@ -81,7 +82,7 @@ if ($unf_options['unf_contactformemail'] ) {
 				$mail->send();
 
 				if($sendCopy == true) {
-					$subject = 'Copy of message sent to '.esc_url( home_url() ).'.';
+					$subject = 'Kopia wiadomosci wyslanej do: '.esc_url( home_url() ).'.';
 
 					$mail->Subject = $subject;
 					$mail->Body    = $body;
