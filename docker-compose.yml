@@ -8,6 +8,8 @@ web:
     - "80:80"
   environment:
     - TERM=xterm
+  dns:
+    - 8.8.8.8
 db:
   image: tutum/mysql
   environment:
