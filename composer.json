@@ -1,0 +1,127 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress",
+        "type": "webroot",
+        "version": "4.4.2",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/4.4.2.zip"
+        },
+        "require" : {
+          "fancyguy/webroot-installer": "1.0.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "bootstrap-shortcodes",
+        "type": "wordpress-plugin",
+        "version": "3.4.0",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/bootstrap-shortcodes.3.4.0.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "breadcrumb-trail",
+        "type": "wordpress-plugin",
+        "version": "1.0.0",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/breadcrumb-trail.1.0.0.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mailchimp-for-wp",
+        "type": "wordpress-plugin",
+        "version": "3.1.5",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.3.1.5.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "responsive-lightbox",
+        "type": "wordpress-plugin",
+        "version": "1.6.7",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/responsive-lightbox.1.6.7.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wp-retina-2x",
+        "type": "wordpress-plugin",
+        "version": "4.4.4",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/wp-retina-2x.4.4.4.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields",
+        "type": "wordpress-plugin",
+        "version": "4.4.5",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.5.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "wordpress": "4.*",
+    "bootstrap-shortcodes": "3.4.0",
+    "fancyguy/webroot-installer": "1.0.0",
+    "breadcrumb-trail": "1.0.0",
+    "mailchimp-for-wp": "3.1.5",
+    "responsive-lightbox": "1.6.7",
+    "wp-retina-2x": "4.4.4",
+    "advanced-custom-fields": "4.4.5"
+  },
+  "extra": {
+    "webroot-dir": "wp",
+    "webroot-package": "wordpress"
+  }
+}
